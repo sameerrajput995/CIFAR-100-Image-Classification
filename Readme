@@ -1,0 +1,27 @@
+
+ML-CIFAR100
+The main goal of this project is to perform binary classification of images in two assigned superclass pairs given to our group. 
+The robustness of the algorithm is tested against sub-class image data hidden during the training stage.
+Milestone 1 : Prediction on randomly selected testing images
+Milestone 2 : Prediction on one testing subclass images from each of the two superclasses
+Milestone 3 : Prediction on two testing subclass images from each of the two superclasses
+
+About the dataset
+The CIFAR-100 dataset has 100 classes containing 600 images each. 
+There are 500 training images and 100 testing images per class. 
+The 100 classes in the CIFAR-100 are grouped into 20 super classes. 
+Each image comes with a "fine" label (the class to which it belongs) 
+and a "coarse" label (the superclass to which it belongs) (CIFAR 100 DATASET).
+
+Super Class	Class
+Vehicle 1	Bicycle, Bus, Motorcycle, Pickup truck, Train
+Vehicle 2	Rocket, Tank, Tractor, Streetcar, Lawn-mower
+
+Results
+“lawn_mower” has the most resembling features that could be learned by our CNN model through vehicle 2 subclasses 
+and “motorcycle” has the most resembling features that could be learned by our CNN model through vehicle 1. 
+The combinations with these two for predictions on two testing subclass images from each of the two superclasses gave consistent accuracies    
+
+“rocket” has the odd one out features in vehicle 2 which our CNN model didn’t learn 
+and “train” has the odd one out features in vehicle 1 which our CNN model didn’t learn 
+and thus the combinations associated with that pair gave poor accuracies consistently.
